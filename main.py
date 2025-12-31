@@ -9,7 +9,7 @@ import json
 def get_windowsmc_url() -> str:
     """返回官方最新 7z 的直链"""
     url = "https://x19apigatewayobt.nie.netease.com/cpp-game-client-info"
-    payload = {"os": "10.0", "version": 300000000, "entity_id": 1}
+    payload = {"os": "10.0", "version": 300000000, "entity_id": 1} #version = 1亿是32位，version = 3亿是64位
     headers = {"Content-Type": "application/json"}
 
     resp = requests.post(url, data=json.dumps(payload), headers=headers, timeout=10)
