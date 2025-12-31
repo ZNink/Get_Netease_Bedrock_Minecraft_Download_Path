@@ -1,14 +1,13 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-获取网易《我的世界》基岩版 windowsmc.7z 直链
-运行后仅打印下载地址，无其它副作用
+获取网易《我的世界》基岩版 7z 直链
 """
 import requests
 import json
 
 def get_windowsmc_url() -> str:
-    """返回官方最新 windowsmc.7z 的直链"""
+    """返回官方最新 7z 的直链"""
     url = "https://x19apigatewayobt.nie.netease.com/cpp-game-client-info"
     payload = {"os": "10.0", "version": 100000000, "entity_id": 1}
     headers = {"Content-Type": "application/json"}
